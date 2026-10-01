@@ -13,7 +13,7 @@ PostgreSQL e-commerce project with 5 integrated tables. Includes SQL queries to 
 First of all, we are going to use PostgreSQL to answer 10 business intelligence questions, therefore, let's follow the steps
 below to start this project from scratch:<br>
 
-**1. Database connection**<br>
+**1. PostgreSQL connection**<br>
 ```sql
 psql -d postgres -U your_name
 ```
@@ -27,8 +27,12 @@ psql -d postgres -U your_name
 ```sql
 CREATE DATABASE ecommerce;
 ```
+**4. Database connection**
+```sql
+\c
+```
 
-**4. Table creation**<br>
+**5. Table creation**<br>
 ```sql
 -- 1. Customers Table
 CREATE TABLE customers (
@@ -75,7 +79,7 @@ CREATE TABLE order_items (
 );
 ```
 
-**5. Populating tables**<br>
+**6. Populating tables**<br>
 ```sql
 -- 1. Categories Table
 INSERT INTO categories (category_name) VALUES
@@ -232,7 +236,7 @@ INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES
 	(10, 8, 1, 199.99);  -- Noise-Canceling Headphones
 ```
 
-**6. Business Questions**<br>
+**7. Business Questions**<br>
 
 **Question 1 - Total Sales Revenue:** What is the total sales revenue generated from all completed orders in the e-commerce store?<br>
 **Answer:**<br>
