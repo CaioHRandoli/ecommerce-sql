@@ -27,7 +27,7 @@ psql -d postgres -U your_name
 ```sql
 CREATE DATABASE ecommerce;
 ```
-**4. Database connection**
+**4. Database connection**<br>
 ```sql
 \c
 ```
