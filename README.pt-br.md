@@ -13,7 +13,7 @@ Projeto de e-commerce em PostgreSQL com 5 tabelas integradas. Inclui consultas S
 Primeiramente, vamos usar o PostgreSQL para responder a 10 perguntas de business intelligence, portanto, vamos seguir os passos
 abaixo para iniciar este projeto do zero:<br>
 
-**1. Conexão com banco de dados**<br>
+**1. Conexão com PostgreSQL**<br>
 ```sql
 psql -d postgres -U seu_nome
 ```
@@ -28,7 +28,12 @@ psql -d postgres -U seu_nome
 CREATE DATABASE ecommerce;
 ```
 
-**4. Criar tabela**<br>
+**4. Conexão com banco de dados**<br>
+```sql
+\c
+```
+
+**5. Criar tabela**<br>
 ```sql
 -- 1. Tabela de clientes
 CREATE TABLE customers (
@@ -75,7 +80,7 @@ CREATE TABLE order_items (
 );
 ```
 
-**5. Inserção de dados**<br>
+**6. Inserção de dados**<br>
 ```sql
 -- 1. Tabela de categorias
 INSERT INTO categories (category_name) VALUES
@@ -228,7 +233,7 @@ INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES
 	(10, 8, 1, 199.99);  -- Fone de Ouvido com Cancelamento de Ruído
 ```
 
-**6. Perguntas de negócio**<br>
+**7. Perguntas de negócio**<br>
 
 **Pergunta 1 - Faturamento Total de Vendas:** Qual é o faturamento total de vendas gerado a partir de todos os pedidos concluídos na loja de e-commerce?<br>
 **Resposta:**<br>
